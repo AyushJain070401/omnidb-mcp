@@ -89,11 +89,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-org/omnidb-mcp"
+    "url": "https://github.com/AyushJain070401/omnidb-mcp.git"
   },
-  "author": "",
+  "author": "Ayush Jain",
   "bugs": {
-    "url": "https://github.com/your-org/omnidb-mcp/issues"
+    "url": "https://github.com/AyushJain070401/omnidb-mcp/issues"
   },
-  "homepage": "https://github.com/your-org/omnidb-mcp#readme"
+  "homepage": "https://github.com/AyushJain070401/omnidb-mcp#readme"
 }

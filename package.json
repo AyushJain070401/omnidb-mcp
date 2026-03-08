@@ -1,0 +1,99 @@
+{
+  "name": "omnidb-mcp",
+  "version": "1.0.0",
+  "description": "Universal Database MCP Server — connect any LLM to 20+ databases via the Model Context Protocol. Supports PostgreSQL, MySQL, SQLite, MongoDB, Redis, MSSQL, Oracle, Cassandra, ClickHouse, Neo4j, DynamoDB, Elasticsearch, CouchDB, InfluxDB, Firestore, Supabase, CockroachDB, MariaDB, and more.",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "database",
+    "postgresql",
+    "mysql",
+    "sqlite",
+    "mongodb",
+    "redis",
+    "mssql",
+    "oracle",
+    "cassandra",
+    "clickhouse",
+    "neo4j",
+    "dynamodb",
+    "elasticsearch",
+    "couchdb",
+    "influxdb",
+    "firestore",
+    "supabase",
+    "cockroachdb",
+    "mariadb",
+    "ai",
+    "llm",
+    "claude",
+    "anthropic"
+  ],
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "omnidb-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "config.example.json"
+  ],
+  "scripts": {
+    "build": "tsc && chmod 755 dist/index.js",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "watch": "tsc --watch",
+    "lint": "eslint src/",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.25.0"
+  },
+  "optionalDependencies": {
+    "pg": "^8.13.0",
+    "mysql2": "^3.12.0",
+    "better-sqlite3": "^11.7.0",
+    "mongodb": "^6.12.0",
+    "redis": "^4.7.0",
+    "tedious": "^19.0.0",
+    "oracledb": "^6.7.0",
+    "cassandra-driver": "^4.7.2",
+    "@clickhouse/client": "^1.8.0",
+    "neo4j-driver": "^5.27.0",
+    "@aws-sdk/client-dynamodb": "^3.700.0",
+    "@aws-sdk/lib-dynamodb": "^3.700.0",
+    "@elastic/elasticsearch": "^8.17.0",
+    "nano": "^10.1.4",
+    "@influxdata/influxdb-client": "^1.35.0",
+    "firebase-admin": "^13.0.0",
+    "@neondatabase/serverless": "^0.10.0",
+    "ioredis": "^5.4.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/node": "^22.10.0",
+    "@types/pg": "^8.11.10",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/omnidb-mcp"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/your-org/omnidb-mcp/issues"
+  },
+  "homepage": "https://github.com/your-org/omnidb-mcp#readme"
+}

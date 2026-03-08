@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "_comment": "Example configuration for mcp-database-server. Copy to config.json and edit.",
+
+  "server": {
+    "name": "my-database-server",
+    "version": "1.0.0",
+    "logLevel": "info"
+  },
+
+  "connections": [
+    {
+      "id": "prod-postgres",
+      "engine": "postgresql",
+      "host": "localhost",
+      "port": 5432,
+      "database": "myapp",
+      "username": "readonly_user",
+      "password": "secret",
+      "ssl": { "enabled": true, "rejectUnauthorized": true },
+      "readOnly": true,
+      "queryTimeout": 30000,
+      "maxRows": 500,
+      "pool": { "min": 1, "max": 5 }
+    },
+    {
+      "id": "analytics-clickhouse",
+      "engine": "clickhouse",
+      "connectionString": "http://localhost:8123",
+      "database": "analytics",
+      "username": "default",
+      "password": "",
+      "readOnly": true
+    },
+    {
+      "id": "cache-redis",
+      "engine": "redis",
+      "host": "localhost",
+      "port": 6379,
+      "readOnly": false
+    },
+    {
+      "id": "docs-mongo",
+      "engine": "mongodb",
+      "connectionString": "mongodb://localhost:27017/documents",
+      "readOnly": false
+    },
+    {
+      "id": "local-sqlite",
+      "engine": "sqlite",
+      "database": "./data/local.db",
+      "readOnly": true
+    },
+    {
+      "id": "aws-dynamo",
+      "engine": "dynamodb",
+      "region": "us-east-1",
+      "readOnly": true,
+      "options": {
+        "_comment": "Uses AWS credentials from environment or instance profile"
+      }
+    },
+    {
+      "id": "graph-neo4j",
+      "engine": "neo4j",
+      "host": "localhost",
+      "port": 7687,
+      "username": "neo4j",
+      "password": "password",
+      "database": "neo4j"
+    },
+    {
+      "id": "search-elastic",
+      "engine": "elasticsearch",
+      "host": "localhost",
+      "port": 9200,
+      "username": "elastic",
+      "password": "changeme",
+      "ssl": { "enabled": false }
+    }
+  ],
+
+  "security": {
+    "sqlInjectionProtection": true,
+    "nosqlInjectionProtection": true,
+    "maxQueryLength": 50000,
+    "blockedKeywords": ["TRUNCATE", "DROP DATABASE"],
+    "blockedSchemas": ["information_schema", "pg_catalog", "sys", "mysql", "performance_schema"],
+    "allowDDL": false,
+    "allowDML": true,
+    "auditLogging": true,
+    "rateLimitPerMinute": 120,
+    "maxConnections": 20,
+    "enforceParameterizedQueries": false
+  }
+}

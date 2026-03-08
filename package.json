@@ -1,5 +1,5 @@
 {
-  "name": "omnidb-mcp",
+  "name": "omnidb-mcp-server-server",
   "version": "1.0.0",
   "description": "Universal Database MCP Server — connect any LLM to 20+ databases via the Model Context Protocol. Supports PostgreSQL, MySQL, SQLite, MongoDB, Redis, MSSQL, Oracle, Cassandra, ClickHouse, Neo4j, DynamoDB, Elasticsearch, CouchDB, InfluxDB, Firestore, Supabase, CockroachDB, MariaDB, and more.",
   "keywords": [
@@ -33,7 +33,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
-    "omnidb-mcp": "dist/index.js"
+    "omnidb-mcp-server": "dist/index.js"
   },
   "files": [
     "dist",
@@ -89,11 +89,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AyushJain070401/omnidb-mcp.git"
+    "url": "https://github.com/AyushJain070401/omnidb-mcp-server.git"
   },
   "author": "Ayush Jain",
   "bugs": {
-    "url": "https://github.com/AyushJain070401/omnidb-mcp/issues"
+    "url": "https://github.com/AyushJain070401/omnidb-mcp-server/issues"
   },
-  "homepage": "https://github.com/AyushJain070401/omnidb-mcp#readme"
+  "homepage": "https://github.com/AyushJain070401/omnidb-mcp-server#readme"
 }

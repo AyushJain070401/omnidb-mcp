@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // ============================================================================
-// omnidb-mcp
+// omnidb-mcp-server
 // Universal Database MCP Server — connect any LLM to 20+ databases
 // ============================================================================
 
